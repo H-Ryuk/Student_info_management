@@ -52,20 +52,20 @@ Begin
                 readln(NP [i]);
                 write(' Entrer la filier de stagiaire: ');
                 readln(Filiere[i]);
-                NSsize+= 1;              //  Nombre Stagiaire size 
+                NSsize+= 1;              
                 CheckChargDonn:=true;
 
                 //      NIVEAU
                 y := 0;
                 Repeat
 
-                    // WHEN IF GONNA WORK
+                   
                     If y > 0 Then
                         Begin
                             writeln(' Incorrect choix');
                             writeln('--------------------------------------');
                         End;
-                    ////////////////////
+                    
 
 
                     writeln(' Choisissez le niveau du stagiaire entrer [ 1 Ou 2 ] ');
@@ -84,23 +84,23 @@ Begin
                         End;
                     y+= 1;
                 Until (choixNiveau = 1) Or (choixNiveau = 2);
-                ////////////////////////////////////////// Repeat NIVEAU
+               
 
 
                 repeat
-                If  NSsize < NombreStagiaire then                                // ILA KANT  ( NSsize < NombreStagiaire ) GHADI ITAL3 DAKCHI LI DAKH IF 
+                If  NSsize < NombreStagiaire then                               
                     Begin
                     
                         writeln('Entrer [ 1 ] pour continue la charge.');
                         writeln('Entrer [ 2 ] pour quitter.');
                         readln(checkCharge);
 
-                        If checkCharge = 2 then                             //ILA KANT ( checkCharge = 2 ) GHADI TKHRAJ MN FOR LOOP
+                        If checkCharge = 2 then                             
                             Begin
                                 i := NombreStagiaire;
                             End;
                     End
-                else                                       //   HAD ELSE DYAL  ( if  NSsize < NombreStagiaire then ) YA3NI ILA KAN L3AKS DYAL IF 3AD GHADI TKHDM
+                else                                       
                     Begin
                         i := NombreStagiaire;
                         checkCharge := 2;
@@ -109,7 +109,7 @@ Begin
 
             End;
     Until checkCharge = 2;
-    NombreStagiaire := NSsize;                           // KATHADD SIZE DYAL NOMBRE STAGAIRE 3LA HSSAB CH7AL DAKHLTI DYAL LES STAGIAIRE
+    NombreStagiaire := NSsize;                           
 End;
 
 
@@ -204,9 +204,7 @@ Begin
     writeln('----------------------------------------------------------------------------------------------------');
     writeln('   Click enter pour continue.');
     readln;
-    //writeln('nombre Stagiaire= ',NombreStagiaire);
-    //writeln(' numero inscri 0= ',NumIns[0]);
-    // writeln(' numero inscri 1= ',NumIns[1]);
+    
 End;
 
 
@@ -233,7 +231,7 @@ Begin
 
 
         If y = 0 Then
-            //ILA MAKANTCH FILIERE LI DAKHL USER KAYNA 3AND CHI STAGIAIRE GHADI TKHDM HAD  IF  IF
+            
             Begin
                 writeln('    Aucun Filiere avec ce nom.');
                 writeln('------------------------------------------');
@@ -249,7 +247,7 @@ Begin
 
     Until (y = 1) Or (y = 2);
     If y = 1 Then
-        // YA3NI ILA KANT FILIERE 3AND CHI STAGIAIRE  3AD GHADI TKHDM HAD IF 
+         
         Begin
             writeln(
 '----------------------------------------------------------------------------------------------------'
@@ -336,8 +334,8 @@ End;
  j := 0;
         If x = 1 Then
             Begin
-                write(' Entrer le numero d''inscription stagiaire: ');                  // KADKHL NUM INSCRIPTION ILA MAKAN HTA STAGIAIRE  3ANDO NAFS NUM GHADI  TKML TDKHAL LES DONNEES 3ADI 
-                readln(NumChek);                                                                        //  ILA KAN DEJA CHI WAHD 3ANDO NAFS NUM LI DAKHLTI GHADI ITL3 LK MESSAGE
+                write(' Entrer le numero d''inscription stagiaire: ');                  
+                readln(NumChek);                                                                        
                 For u:=0 To NombreStagiaire Do
                     Begin
                         If NumChek = NumIns[u] Then
@@ -392,13 +390,13 @@ End;
 
 
 
-Procedure RechercheStagiaire;               //METHOD KADIR LA RECHRCHE 3LA LES STAGAIRES A PARTIR DE NUMERO D'INSCRIPTION
+Procedure RechercheStagiaire;               
 Begin
     clrscr;
  x := 0;
  j :=0;
     Repeat
-//////////////////////////////////
+
        
             	writeln('  Aucun stagiaire avec ce numero');
             	writeln('---------------------------------------------');
@@ -426,7 +424,7 @@ Begin
             j:=10;
             until (choixRecherche = 1) or (choixRecherche = 2) ;
     End;
-    ///////////////////////////////////
+    
   
     if x= 0 then
     begin
@@ -588,7 +586,7 @@ Begin
                 NombreStagiaire := NombreStagiaire-1;
             End;
     Until (y=1) Or (y = 2);
-    //AfficherEtatglobale;
+    
 End;
 
 
@@ -690,7 +688,7 @@ End;
 
 
 
-procedure user;  //METHOD KHADMTHA WST LMETHOD DYAL CHARGEMENT NOTE 
+procedure user;  
 begin
 	if  CharegementSize <  NombreStagiaire then
 	begin
@@ -723,7 +721,7 @@ end;
 
 
 
-Procedure ChargementNote;               // METHOD KAT3TK BACH DAKHL NO9AT DYAL STAGIAIRE L KONTI DEJA MDAKHL LES DONNEES DYALHOM
+Procedure ChargementNote;               
 Begin
 	
 	j := 0;
@@ -830,7 +828,7 @@ End;
 
 
 
-Procedure AffiNoteParticulier;   // UN METHOD QUI AFFICHE UNE BULLETIN DE PARTICULIER KAT3TIHA NUM INSCRIPTION  O KAT3TK BULLETIN DYAL STAGIAIRE
+Procedure AffiNoteParticulier;   // UN METHOD QUI AFFICHE UNE BULLETIN DE PARTICULIER
 Begin
 	j := 0;
 	repeat
